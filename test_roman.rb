@@ -18,10 +18,15 @@ class My_test < Minitest::Test
   def test_for_iv
     assert_equal("IV",roman_numeral.fetch(4))
   end
-  
+
   def test_for_v
     assert_equal("V", roman_numeral.fetch(5))
   end
+
+  def test_for_m
+    assert_equal("M", roman_numeral.fetch(1000))
+  end 
+
 
 
 
