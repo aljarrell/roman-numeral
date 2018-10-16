@@ -31,6 +31,13 @@ class My_test < Minitest::Test
     assert_equal(Hash, roman_numeral_reverse.class)
   end
 
+  def test_for_one
+    assert_equal(1, roman_numeral_reverse.fetch("I"))
+  end
+
+  def test_for_five
+    assert_equal(5, roman_numeral_reverse.fetch("V"))
+  end 
 
 
 
