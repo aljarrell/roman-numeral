@@ -46,7 +46,7 @@ elsif hash == roman_numeral
       x = x % value
     end
     return roman
-  elsif hash == numerals_reversed
+  elsif hash == roman_numeral_reverse
     roman = 0
     hash.each do |value, letter|
       roman += letter * x.scan(/#{value}/).count()

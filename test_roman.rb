@@ -61,6 +61,14 @@ class My_test < Minitest::Test
 
   def test_rome_for_55
     assert_equal("LV", rome(55, roman_numeral()))
+  end
+
+  def test_reverse_for_i
+    assert_equal(1, rome("I", roman_numeral_reverse()))
+  end
+
+  def test_reverse_for_vi
+    assert_equal(6, rome("VI", roman_numeral_reverse()))
   end 
 
 
