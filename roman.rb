@@ -32,16 +32,26 @@ def roman_numeral_reverse
     900 => "CM",
     1000 => "M",
   }
-  numeral_key = numbers_key.invert
-  return numeral_key
+  numeral = numbers_key.invert
+  return numeral
 end
 
-def rome(num, hash)
-  if num == 0
-    return ""
-end 
-
-
-
-
+def rome(x, hash)
+  if x == 0
+  return ""
+elsif hash == roman_numeral
+    roman = ""
+    hash.each do |value, letter|
+      roman << letter*(x / value)
+      x = x % value
+    end
+    return roman
+  elsif hash == numerals_reversed
+    roman = 0
+    hash.each do |value, letter|
+      roman += letter * x.scan(/#{value}/).count()
+      x = x.sub(/#{value}/, "")
+    end
+    return roman
+  end
 end

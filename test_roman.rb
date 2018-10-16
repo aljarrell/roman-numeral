@@ -47,6 +47,13 @@ class My_test < Minitest::Test
     assert_equal("", rome(0,roman_numeral))
   end
 
+  def test_for_return_empty_string_reverse
+    assert_equal("", rome(0,roman_numeral_reverse))
+  end
+
+  def test_rome_for_1
+    assert_equal("I", rome(1,roman_numeral()))
+  end 
 
 
 
