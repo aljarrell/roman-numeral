@@ -77,7 +77,10 @@ class My_test < Minitest::Test
 
    def test_rome_for_1450
      assert_equal("MCDL", rome(1450, roman_numeral()))
-   end 
+   end
 
+   def test_rome_for_888
+     assert_equal("DCCCLXXXVIII", rome(888, roman_numeral()))
+   end 
 
 end
