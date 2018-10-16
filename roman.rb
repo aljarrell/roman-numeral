@@ -35,3 +35,13 @@ def roman_numeral_reverse
   numeral_key = numbers_key.invert
   return numeral_key
 end
+
+def rome(num, hash)
+  if num == 0
+    return ""
+end 
+
+
+
+
+end

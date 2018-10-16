@@ -37,7 +37,15 @@ class My_test < Minitest::Test
 
   def test_for_five
     assert_equal(5, roman_numeral_reverse.fetch("V"))
-  end 
+  end
+
+  def test_for_one_hundred
+    assert_equal(100, roman_numeral_reverse.fetch("C"))
+  end
+
+  def test_for_return_empty_string
+    assert_equal("", rome(0,roman_numeral))
+  end
 
 
 
