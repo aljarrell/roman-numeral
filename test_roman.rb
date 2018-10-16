@@ -69,9 +69,15 @@ class My_test < Minitest::Test
 
   def test_reverse_for_vi
     assert_equal(6, rome("VI", roman_numeral_reverse()))
-  end 
+  end
 
+  def test_reverse_for_mcdl
+    assert_equal(1450, rome("MCDL",roman_numeral_reverse()))
+  end
 
+   def test_rome_for_1450
+     assert_equal("MCDL", rome(1450, roman_numeral()))
+   end 
 
 
 end
