@@ -81,6 +81,16 @@ class My_test < Minitest::Test
 
    def test_rome_for_888
      assert_equal("DCCCLXXXVIII", rome(888, roman_numeral()))
-   end 
+   end
+
+   def test_for_q
+     assert_equal("Integers only!", rome("q", roman_numeral()))
+   end
+
+   def test_string_of_ones
+     assert_equal("invalid input", rome("1111", roman_numeral_reverse()))
+   end
+
+
 
 end

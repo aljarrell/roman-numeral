@@ -38,8 +38,11 @@ end
 
 def rome(x, hash)
   if x == 0
-  return ""
-elsif hash == roman_numeral
+    return ""
+  elsif hash == roman_numeral
+    if x.class == String
+      return "Integers only!"
+    end
     roman = ""
     hash.each do |value, letter|
       roman << letter*(x / value)
@@ -47,6 +50,13 @@ elsif hash == roman_numeral
     end
     return roman
   elsif hash == roman_numeral_reverse
+    split = x.split('')
+    hash_value = hash.keys
+    split.each do |stuff|
+      if hash_value[6..12].include?(stuff) == false
+        return "invalid input"
+      end
+    end
     roman = 0
     hash.each do |value, letter|
       roman += letter * x.scan(/#{value}/).count()
